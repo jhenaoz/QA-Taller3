@@ -1,0 +1,14 @@
+{
+  "name": "ejemplo03-ci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine": "^2.8.0"
+  }
+}
