@@ -4,6 +4,8 @@ pipeline {
     stage('Build') {
       steps {
         sh 'echo Hello_World'
+        sh 'echo $GIT_URL'
+        sh 'echo $ghprbPullId'
       }
     }
   }
