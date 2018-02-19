@@ -2,11 +2,11 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        sh 'echo Hello_World'
-      }
       when {
-        expression {env.CHANGE_ID != null}
+        allOf {
+          expression {env.CHANGE_ID != null}
+          branch '!master'
+        }
       }
       steps {
         sh 'echo Hello_World'
