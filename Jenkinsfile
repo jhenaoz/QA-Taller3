@@ -2,6 +2,9 @@ pipeline {
   agent any
   stages {
     stage('Build') {
+      steps {
+        sh 'echo Hello_World'
+      }
       when {
         expression {env.CHANGE_ID != null}
       }
