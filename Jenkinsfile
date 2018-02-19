@@ -4,8 +4,8 @@ pipeline {
     stage('Build') {
       when {
         allOf {
+          expression {!(env.BRANCH_NAME ==~ /(master|staging)/)}
           expression {env.CHANGE_ID != null}
-          branch '!master'
         }
       }
       steps {
