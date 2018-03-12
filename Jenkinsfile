@@ -1,4 +1,7 @@
 pipeline {
+  environment {
+    SONAR_BRANCH_NAME = env.BRANCH_NAME.replace("/","-")
+  }
   agent any
   stages {
     stage('Build') {
@@ -12,7 +15,7 @@ pipeline {
         sh 'echo Hello_World'
         sh 'echo $GIT_URL'
         sh 'echo $ghprbPullId'
-        sh 'echo $CHANGE_ID'
+        sh 'echo $$SONAR_BRANCH_NAME'
       }
     }
   }
