@@ -15,7 +15,7 @@ pipeline {
         sh 'echo Hello_World'
         sh 'echo $GIT_URL'
         sh 'echo $ghprbPullId'
-        sh 'echo $$SONAR_BRANCH_NAME'
+        sh 'echo $SONAR_BRANCH_NAME'
       }
     }
   }
